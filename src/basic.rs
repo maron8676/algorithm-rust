@@ -1,11 +1,11 @@
-fn max<T>(v: Vec<T>) -> Option<T>
+pub fn max<T>(v: Vec<T>) -> Option<T>
 where
     T: Ord + Copy,
 {
     v.iter().copied().max()
 }
 
-fn arg_max<T>(v: Vec<T>) -> Option<usize>
+pub fn arg_max<T>(v: Vec<T>) -> Option<usize>
 where
     T: Ord + Copy,
 {
@@ -15,14 +15,14 @@ where
         .map_or(None, |(index, _)| Some(index))
 }
 
-fn min<T>(v: Vec<T>) -> Option<T>
+pub fn min<T>(v: Vec<T>) -> Option<T>
 where
     T: Ord + Copy,
 {
     v.iter().copied().min()
 }
 
-fn arg_min<T>(v: Vec<T>) -> Option<usize>
+pub fn arg_min<T>(v: Vec<T>) -> Option<usize>
 where
     T: Ord + Copy,
 {
@@ -32,7 +32,7 @@ where
         .map_or(None, |(index, _)| Some(index))
 }
 
-fn sum<T>(v: Vec<T>) -> T
+pub fn sum<T>(v: Vec<T>) -> T
 where
     T: std::iter::Sum + Copy,
 {
