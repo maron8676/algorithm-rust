@@ -1,3 +1,3 @@
 pub mod basic;
-pub mod search;
+pub mod collection;
 pub mod integer;
